@@ -40,7 +40,7 @@ server.post("/projects/:id/tasks", checkProjectExistence, (req, res) => {
 
   const project = projects.find(p => p.id == id);
 
-  project.tasks.pop(title);
+  project.tasks.push(title);
 
   return res.json(projects);
 });
